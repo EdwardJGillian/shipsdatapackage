@@ -1,0 +1,33 @@
+Package: shipsdatapackage
+Title: This package shows how to deal with ships data
+Version: 1.0.0
+Authors@R: 
+    person(given = "Edward",
+           family = "Gillian",
+           role = c("aut", "cre"),
+           email = "edwardjgillian@gmail.com",
+           comment = c(ORCID = 0000-0003-2732-5107))
+Description: This package shows how to deal with ships data.
+Depends: R (>= 3.5.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    dplyr,
+    tidyr,
+    ggplot2,
+    leaflet,
+    readr,
+    tibble,
+    purrr,
+    stringr,
+    geosphere,
+    gplots,
+    magrittr,
+    shiny,
+    shiny.semantic
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
