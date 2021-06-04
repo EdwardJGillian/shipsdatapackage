@@ -39,8 +39,6 @@ server <- function(input, output, session) {
     distanceCalculation <- mapply(shipsdatapackage::calculate_distance, frameWithoutNA$LON, frameWithoutNA$LAT, frameWithoutNA$next_Lon, frameWithoutNA$next_Lat)
 
     observationsIndexes <- which(distanceCalculation == max(distanceCalculation))
-    #print(observationsIndexes)
-    #print(frameWithoutNA[c(observationsIndexes -1, observationsIndexes, observationsIndexes + 1),])
     lastIndex <- tail(observationsIndexes, n=1)
     cbind(frameWithoutNA[lastIndex,], distance=distanceCalculation[lastIndex])
   })

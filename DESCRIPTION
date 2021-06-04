@@ -26,6 +26,7 @@ Imports:
     geosphere,
     gplots,
     magrittr,
+    rmarkdown,
     shiny,
     shiny.semantic
 Suggests: 
