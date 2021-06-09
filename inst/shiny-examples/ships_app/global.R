@@ -3,6 +3,7 @@ library(shiny.semantic)
 library(leaflet)
 library(geosphere)
 library(dplyr)
+library(shipsdatapackage)
 
 
 home <- setwd(Sys.getenv("HOME"))
