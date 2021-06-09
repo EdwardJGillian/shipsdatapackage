@@ -1,3 +1,5 @@
+library(shipsdatapackage)
+
 server <- function(input, output, session) {
 
   values <- reactiveValues()

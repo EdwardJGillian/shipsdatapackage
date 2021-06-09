@@ -1,6 +1,7 @@
 library(shiny)
 library(shiny.semantic)
 library(leaflet)
+library(shipsdatapackage)
 
 ui <- semanticPage(
   div(class = "ui raised segment",
