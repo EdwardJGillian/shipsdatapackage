@@ -1,4 +1,5 @@
 Package: shipsdatapackage
+Type: Package
 Title: This package shows how to deal with ships data
 Version: 1.0.0
 Authors@R: 
