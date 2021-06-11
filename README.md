@@ -33,3 +33,14 @@ You can install the released version of `shipsdatapackage` with:
 ``` r
 devtools::install_github("EdwardJGillian/shipsdatapackage")
 ```
+
+## Running the package
+
+You can run `shipsdatapackage` by opening `global.R` in
+`shipsdatapackage/inst/shiny-examples/ships_app/`
+
+or type in the console:
+
+``` r
+shipsdatapackage::runShipExample()
+```
