@@ -3,6 +3,7 @@ title: "ShipsDataPackage"
 author: "Edward Gillian"
 date: "27/05/2021"
 output: github_document
+always_allow_html: true
 ---
 
 
@@ -37,6 +38,22 @@ You can install the released version of `shipsdatapackage` with:
 
 ``` r
 devtools::install_github("EdwardJGillian/shipsdatapackage")
+```
+
+## Embedded Application
+
+You can see the `shipsdatapackage` embedded in this document:
+
+```{r ships_data, echo=FALSE}
+library(shipsdatapackage)
+
+appDir <- system.file("shiny-examples", "ships_app", package = "shipsdatapackage")
+
+shiny::shinyAppDir(appDir,
+  options = list(
+  width = "100%", height = 550
+  )
+)
 ```
 
 ## Running the package

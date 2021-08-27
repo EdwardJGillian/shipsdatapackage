@@ -34,6 +34,51 @@ You can install the released version of `shipsdatapackage` with:
 devtools::install_github("EdwardJGillian/shipsdatapackage")
 ```
 
+## Embedded Application
+
+You can see the `shipsdatapackage` embedded in this document:
+
+    #> [1] "C:/Users/gillian_e/Documents/R/win-library/4.0/shipsdatapackage/shiny-examples/ships_app"
+    #> Loading required package: shiny
+    #> Warning: package 'shiny' was built under R version 4.0.5
+    #> Warning: package 'shiny.semantic' was built under R version 4.0.5
+    #> 
+    #> Attaching package: 'shiny.semantic'
+    #> The following objects are masked from 'package:shiny':
+    #> 
+    #>     actionButton, checkboxInput, dateInput, fileInput, flowLayout,
+    #>     icon, incProgress, modalDialog, numericInput, Progress,
+    #>     removeModal, removeNotification, selectInput, setProgress,
+    #>     showNotification, sliderInput, splitLayout, textAreaInput,
+    #>     textInput, updateActionButton, updateSelectInput,
+    #>     updateSliderInput, verticalLayout, withProgress
+    #> The following object is masked from 'package:graphics':
+    #> 
+    #>     grid
+    #> The following object is masked from 'package:utils':
+    #> 
+    #>     menu
+    #> Warning: package 'leaflet' was built under R version 4.0.5
+    #> Warning: package 'geosphere' was built under R version 4.0.5
+    #> 
+    #> Attaching package: 'geosphere'
+    #> The following object is masked from 'package:shiny':
+    #> 
+    #>     span
+    #> Warning: package 'dplyr' was built under R version 4.0.5
+    #> 
+    #> Attaching package: 'dplyr'
+    #> The following objects are masked from 'package:stats':
+    #> 
+    #>     filter, lag
+    #> The following objects are masked from 'package:base':
+    #> 
+    #>     intersect, setdiff, setequal, union
+    #> 
+    #> Listening on http://127.0.0.1:8524
+
+<img src="man/figures/README-ships_data-1.png" width="100%" />
+
 ## Running the package
 
 You can run `shipsdatapackage` by opening `global.R` in
