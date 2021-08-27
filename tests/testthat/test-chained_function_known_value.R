@@ -20,7 +20,6 @@ test_chained_functions <- function(csv_file) {
       paste0(home, "/data/csv_examples/", csv_file)
     csv <- stringr::str_remove(csv_file, ".csv")
     df1 <- readr::read_csv(file=csv_path, col_names=TRUE, col_types = readr::cols())
-    shipsTypes = unique(df1["ship_type"])
     parameter_list <- shipsdatapackage::general_data_preprocess(df1)
 
     # SuppressWarnings used as expect_known_value is a deprecated function
