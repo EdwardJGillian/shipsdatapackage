@@ -27,19 +27,19 @@ test_chained_functions <- function(csv_file) {
     suppressWarnings(testthat::expect_known_value(
       parameter_list, tname("param_list")))
 
-    frameWithNextValues <- cbind(df1[parameter_list$ranks,], next_Lat = parameter_list$next_Lat, next_Lon = parameter_list$next_Lon)
+    frame_with_next_values <- cbind(df1[parameter_list$ranks,], next_lat = parameter_list$next_lat, next_lon = parameter_list$next_lon)
 
-    frameWithoutNA <- frameWithNextValues[0:(nrow(frameWithNextValues)-1),]
+    frame_without_na <- frame_with_next_values[0:(nrow(frame_with_next_values)-1),]
 
     # rename columns by index to ensure column names are different
-    frameWithoutNA <- frameWithoutNA %>%
-      dplyr::rename(next_Lat = 21, next_Lon = 22)
+    frame_without_na <- frame_without_na %>%
+      dplyr::rename(next_lat = 21, next_lon = 22)
 
-    calculate_Distance <- mapply(shipsdatapackage::calculate_distance, frameWithoutNA$LON, frameWithoutNA$LAT, frameWithoutNA$next_Lon, frameWithoutNA$next_Lat)
+    calc_distance <- mapply(shipsdatapackage::calculate_distance, frame_without_na$LON, frame_without_na$LAT, frame_without_na$next_lon, frame_without_na$next_lat)
 
     # SuppressWarnings used as expect_known_value is a deprecated function
     suppressWarnings(testthat::expect_known_value(
-      calculate_Distance, tname("calc_Dist")))
+      calc_distance, tname("calc_dist")))
 
 
   })

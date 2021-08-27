@@ -3,7 +3,7 @@
 #' @export
 #'
 
-runShipExample <- function() {
+run_ship_example <- function() {
 
   appDir <- system.file("shiny-examples", "ships_app", package = "shipsdatapackage")
   if (appDir == "") {

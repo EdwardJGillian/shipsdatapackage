@@ -12,12 +12,11 @@ home <- setwd(Sys.getenv("HOME"))
 rds_file_path <- file.path(home, "extdata/ships.rds")
 
 # load ships data
-shipsData <- readRDS(rds_file_path)
+ships_data <- readRDS(rds_file_path)
 
 # set up the ship types and minimum and maximum latitude and longitude
-shipsTypes <- unique(shipsData["ship_type"])
-MIN_LAT <- min(shipsData["LAT"])
-MAX_LAT <- max(shipsData["LAT"])
-MIN_LON <- min(shipsData["LON"])
-MAX_LON <- max(shipsData["LON"])
-
+ships_types <- unique(ships_data["ship_type"])
+min_lat <- min(ships_data["LAT"])
+max_lat <- max(ships_data["LAT"])
+min_lon <- min(ships_data["LON"])
+max_lon <- max(ships_data["LON"])

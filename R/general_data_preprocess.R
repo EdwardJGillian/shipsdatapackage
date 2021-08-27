@@ -10,12 +10,12 @@ general_data_preprocess <- function(df1) {
 
   ranks <- order(df1$DATETIME)
 
-  nextLat <- dplyr::lead(df1[ranks, "LAT"], n = 1L, default = NA)
-  nextLon <- dplyr::lead(df1[ranks, "LON"], n = 1L, default = NA)
+  next_lat <- dplyr::lead(df1[ranks, "LAT"], n = 1L, default = NA)
+  next_lon <- dplyr::lead(df1[ranks, "LON"], n = 1L, default = NA)
 
 
-  data_list <- list(ranks = ranks, nextLat = nextLat, nextLon = nextLon)
-  names(data_list) <- c("ranks", "next_Lat","next_Lon")
+  data_list <- list(ranks = ranks, next_lat = next_lat, next_lon = next_lon)
+  #names(data_list) <- c("ranks", "next_lat","next_lon")
   return(data_list)
 
 }

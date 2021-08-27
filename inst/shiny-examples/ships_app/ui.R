@@ -15,14 +15,14 @@ ui <- semanticPage(
   sidebar_layout(
     sidebar_panel(
       h1(selectInput(
-        "shipTypeSelect",
+        "ship_type_select",
         label = "Ship Type:",
-        choices = shipsTypes$ship_type,
-        selected = shipsTypes$ship_type[1]
+        choices = ships_types$ship_type,
+        selected = ships_types$ship_type[1]
         )
       ),
-      h1(uiOutput("selectShipName")),
-      h2(textOutput("shipDistanceText")),
+      h1(uiOutput("select_ship_name")),
+      h2(textOutput("ship_distance_text")),
       tags$br(),
     ),
     main_panel(

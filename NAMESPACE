@@ -2,4 +2,4 @@
 
 export(calculate_distance)
 export(general_data_preprocess)
-export(runShipExample)
+export(run_ship_example)
