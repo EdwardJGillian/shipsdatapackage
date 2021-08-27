@@ -68,16 +68,16 @@ server <- function(input, output, session) {
   observe({
     ship_distance_vector <- ship_distance()
 
-    leafletProxy('map') %>% # use the proxy to save computation
-      clearShapes() %>%
-      addCircles(lng = c(ship_distance_vector$LON),
+    leaflet::leafletProxy('map') %>% # use the proxy to save computation
+      leaflet::clearShapes() %>%
+      leaflet::addCircles(lng = c(ship_distance_vector$LON),
                  lat = c(ship_distance_vector$LAT),
                  group ='circles',
                  weight = 1, radius = 100, color = 'orange',
                  fillColor = 'orange',
                  fillOpacity = 0.5,
                  opacity = 1) %>%
-      addCircles(lng = c(ship_distance_vector$next_lon),
+      leaflet::addCircles(lng = c(ship_distance_vector$next_lon),
                  lat = c(ship_distance_vector$next_lat),
                  group = 'circles',
                  weight = 1, radius = 100, color = 'blue',
