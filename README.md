@@ -38,7 +38,6 @@ devtools::install_github("EdwardJGillian/shipsdatapackage")
 
 You can see the `shipsdatapackage` embedded in this document:
 
-    #> [1] "C:/Users/gillian_e/Documents/R/win-library/4.0/shipsdatapackage/shiny-examples/ships_app"
     #> Loading required package: shiny
     #> Warning: package 'shiny' was built under R version 4.0.5
     #> Warning: package 'shiny.semantic' was built under R version 4.0.5
@@ -75,7 +74,7 @@ You can see the `shipsdatapackage` embedded in this document:
     #> 
     #>     intersect, setdiff, setequal, union
     #> 
-    #> Listening on http://127.0.0.1:8524
+    #> Listening on http://127.0.0.1:4782
 
 <img src="man/figures/README-ships_data-1.png" width="100%" />
 

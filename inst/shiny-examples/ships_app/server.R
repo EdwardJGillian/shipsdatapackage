@@ -54,9 +54,9 @@ server <- function(input, output, session) {
       return(addLegend(map, colors = colorAdditions, labels = labelAdditions, opacity = opacity))
     }
 
-    leaflet() %>%
-      addTiles() %>%
-      fitBounds(min_lon, min_lat, max_lon, max_lat) %>%
+    leaflet::leaflet() %>%
+      leaflet::addTiles() %>%
+      leaflet::fitBounds(min_lon, min_lat, max_lon, max_lat) %>%
       addLegendCustom(colors = c("orange", "blue"), labels = c("Start", "End"), sizes = c(10, 10))
   })
 
