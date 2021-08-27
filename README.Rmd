@@ -36,7 +36,7 @@ Lastly, automated testing is done through chained test functions using `testthat
 
 You can install the released version of `shipsdatapackage` with:
 
-``` r
+```
 devtools::install_github("EdwardJGillian/shipsdatapackage")
 ```
 
@@ -62,6 +62,6 @@ You can run `shipsdatapackage` by opening `global.R` in `shipsdatapackage/inst/s
 
 or type in the console:
 
-``` r
-shipsdatapackage::runShipExample()
+```
+shipsdatapackage::run_ship_example()
 ```

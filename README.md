@@ -30,9 +30,7 @@ test outputs.
 
 You can install the released version of `shipsdatapackage` with:
 
-``` r
-devtools::install_github("EdwardJGillian/shipsdatapackage")
-```
+    devtools::install_github("EdwardJGillian/shipsdatapackage")
 
 ## Embedded Application
 
@@ -74,7 +72,7 @@ You can see the `shipsdatapackage` embedded in this document:
     #> 
     #>     intersect, setdiff, setequal, union
     #> 
-    #> Listening on http://127.0.0.1:4782
+    #> Listening on http://127.0.0.1:3873
 
 <img src="man/figures/README-ships_data-1.png" width="100%" />
 
@@ -85,6 +83,4 @@ You can run `shipsdatapackage` by opening `global.R` in
 
 or type in the console:
 
-``` r
-shipsdatapackage::runShipExample()
-```
+    shipsdatapackage::run_ship_example()
