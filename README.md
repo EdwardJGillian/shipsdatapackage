@@ -72,7 +72,7 @@ You can see the `shipsdatapackage` embedded in this document:
     #> 
     #>     intersect, setdiff, setequal, union
     #> 
-    #> Listening on http://127.0.0.1:8461
+    #> Listening on http://127.0.0.1:3230
 
 <img src="man/figures/README-ships_data-1.png" width="100%" />
 
@@ -138,6 +138,50 @@ series of reference files automatically
     
     # apply 1 list vector to the function
     purrr::map(csv_files_list, test_chained_functions)
+
+### Testthat results:
+
+``` r
+library(testthat)
+#> Warning: package 'testthat' was built under R version 4.0.5
+#> 
+#> Attaching package: 'testthat'
+#> The following object is masked from 'package:dplyr':
+#> 
+#>     matches
+library(dplyr)
+library(magrittr)
+#> Warning: package 'magrittr' was built under R version 4.0.3
+#> 
+#> Attaching package: 'magrittr'
+#> The following objects are masked from 'package:testthat':
+#> 
+#>     equals, is_less_than, not
+library(shipsdatapackage)
+test_results_raw <- testthat::test_file("tests/testthat/test-chained_function_known_value.R", reporter = testthat::ListReporter)
+
+test_results_individual <- test_results_raw %>%
+  as_tibble() %>%
+  dplyr::rename(Test = test) %>%
+  dplyr::group_by(file, context, Test) %>%
+  dplyr::summarise(NumTests = first(nb),
+            Passed   = sum(passed),
+            Failed   = sum(failed),
+            Warnings = sum(warning),
+            Errors   = sum(as.numeric(error)),
+            Skipped  = sum(as.numeric(skipped)),
+            .groups = "drop")
+
+summarise_results <- function(res) {
+  res %>% dplyr::summarise_if(is.numeric, sum) %>% knitr::kable()
+  }
+
+summarise_results(test_results_individual)
+```
+
+| NumTests | Passed | Failed | Warnings | Errors | Skipped |
+| -------: | -----: | -----: | -------: | -----: | ------: |
+|        2 |      8 |      0 |        0 |      0 |       0 |
 
 ## Running the package
 
